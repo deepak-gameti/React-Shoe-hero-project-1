@@ -14,7 +14,7 @@
 
 
 .container{
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@
   font-weight: 500;
 }
 
-.nav-bar .btn{
+.nav-bar .loginbtn{
   width: 75px;
   height: 30px;
   font-weight: 500;
@@ -42,6 +42,9 @@
   color: #ffffff;
 }
 
+.menu-btn{
+  display: none;
+}
 .hero-page{
   height: calc(100vh - 72px);
   display: flex;
@@ -69,7 +72,6 @@
 
 .hero-text .btn-bx{
   display: flex;
-  gap: 40px;
 }
 
 .hero-text .btn-bx button{
@@ -83,6 +85,7 @@
 }
 
 .hero-text .btn-bx .btn{
+  margin-left: 40px;
   background-color: transparent;
   border: 1px solid var(--gray);
   color: var(--gray);
@@ -97,27 +100,97 @@
 
 .brand-links .brand-logo{
   display: flex;
-  gap: 16px;
+  /* gap: 16px; */
 }
 
-@media (max-width: 1360px) {
+
+@media (max-width:430px ) {
+  .container{
+    width: 100%;
+  }
+
   .nav-bar{
-    margin: 0;
-    padding: 0 61px;
+   padding: 0 30px;
+   margin-bottom: 2rem; 
+   position: relative;
+  }
+
+
+
+  .menu-btn{
+    display: block;
+    font-size: 1.9rem;
+  }
+
+  .menu-tab{
+    transition: .1s linear;
+    position: absolute;
+    right: 0;
+    padding: 2rem;
+    top: 70px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    list-style-type: none;
+    /* border: 1px solid red; */
+    backdrop-filter: blur(5px);
+    background-color: #ffffff52;
+    height:250px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  }
+
+  .nav-bar .tabs {
+    display: none;
+  }
+  .nav-bar .loginbtn{
+    /* display: none; */
   }
 
   .hero-page{
-    max-width: 1125px;
+    flex-direction: column-reverse;
+   
+    height: 790px;
+    width: 360px;
+  }
+
+  .hero-text h1{
+    font-size: 66px;
+    line-height: 70px;
+  }
+  .hero-text p{
+    font-size: 17px;
+    line-height: 23px;
+    width: 180px;
+    clear: right;
+    text-align: left;
+  }
+
+  .hero-image img{
+    width: 360px;
+    height: 370px;
+  }
+
+  .btn-bx{
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -121px;
+  }
+
+  .btn-bx .btn{
+    margin-top: 7px;
+  }
+
+  .brand-links{
+    width: 148px;
+    padding: 0;
+    align-self: flex-end;
+  }
+  .brand-links p{
+    font: 1rem;
+  }
+  .brand-links .brand-logo img{
+    margin: 0 1rem;
   }
 }
 
-
-@media (max-width: 834px) {
-  .container{
-    max-width: 1124px;
-  }
-
-  .nav-bar{
-    margin: 0 auto;
-  }
-}

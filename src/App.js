@@ -1,19 +1,25 @@
 import "./App.css";
 
+
+
 function App() {
   return (
-    <div className="main-container">
+    <>
       <nav className="nav-bar container">
         <div className="logo">
           <img src="/images/brand_logo.png" alt="brand-logo" />
         </div>
-        <ul className="tabs">
+
+        <ul className="tabs menu-tab">
           <li>MENU</li>
           <li>LOCATION</li>
           <li>ABOUT</li>
           <li>CONTACT</li>
         </ul>
-        <button className="btn">Login</button>
+        <button className="loginbtn">Login</button>
+        <div className="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
 
       <main className="hero-page container">
@@ -40,7 +46,7 @@ function App() {
           <img src="/images/shoe_image.png" alt="shoe" />
         </div>
       </main>
-    </div>
+    </>
   );
 }
 
